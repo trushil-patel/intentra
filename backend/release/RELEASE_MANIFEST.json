@@ -1,0 +1,11 @@
+{
+  "product": "Intentra MVP",
+  "version": "0.1.0",
+  "platform": "Windows 10/11 x64",
+  "format": "PyInstaller onedir console",
+  "entrypoint": "Intentra.exe",
+  "model": "sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8",
+  "network_listener": false,
+  "administrator_required": false,
+  "clean_machine_verified": false
+}

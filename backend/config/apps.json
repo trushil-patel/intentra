@@ -1,0 +1,26 @@
+{
+  "chrome": {
+    "allowed": true
+  },
+  "vscode": {
+    "allowed": true
+  },
+  "notepad": {
+    "allowed": true
+  },
+  "edge": {
+    "allowed": true
+  },
+  "firefox": {
+    "allowed": true
+  },
+  "explorer": {
+  "allowed": true,
+  "executable": "C:\\Windows\\explorer.exe",
+  "aliases": [
+    "file explorer",
+    "windows explorer",
+    "explorer"
+  ]
+}
+}

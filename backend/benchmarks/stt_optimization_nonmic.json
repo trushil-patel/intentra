@@ -1,0 +1,94 @@
+{
+  "evidence": "MEASURED synthetic decoder probe; NOT speech accuracy or live speech latency",
+  "cpu": "Intel Core i3-6006U @ 2.00GHz",
+  "logical_cpus": 4,
+  "input": "1 second float32 silence, internal VAD disabled for probe only, max_new_tokens=16",
+  "compute_requested": "int8",
+  "compute_effective": "int8_float32",
+  "beam": 5,
+  "temperature": 0,
+  "workers": 1,
+  "runs": [
+    {
+      "model": "base.en",
+      "threads": 4,
+      "warmup": false,
+      "load_ms": 2163.83,
+      "decode_ms": [
+        2583.94,
+        2534.72,
+        2559.53
+      ]
+    },
+    {
+      "model": "base.en",
+      "threads": 4,
+      "warmup": true,
+      "load_ms": 2129.54,
+      "warmup_ms": 2383.08,
+      "decode_ms": [
+        2553.8,
+        2592.4,
+        2526.53
+      ]
+    },
+    {
+      "model": "base.en",
+      "threads": 2,
+      "warmup": false,
+      "load_ms": 1988.24,
+      "decode_ms": [
+        2380.88,
+        2134.68,
+        2139.69
+      ]
+    },
+    {
+      "model": "small.en",
+      "threads": 2,
+      "warmup": false,
+      "load_ms": 3850.11,
+      "decode_ms": [
+        7548.26,
+        6792.5,
+        8577.33
+      ]
+    }
+  ],
+  "excluded_run": {
+    "reason": "test suite ran concurrently; not used for thread comparison",
+    "model": "base.en",
+    "threads": 2,
+    "load_ms": 2644.89,
+    "decode_ms": [
+      2883.28,
+      2686.53,
+      2012.15
+    ]
+  },
+  "memory_probe": {
+    "model": "base.en",
+    "threads": 2,
+    "after": "one-token synthetic warmup",
+    "process_peak_working_set_MiB": 324.7
+  },
+  "live_accuracy": "UNMEASURED",
+  "model_downloads": 0,
+  "small_memory_probe": {
+    "threads": 2,
+    "after": "one-token synthetic warmup",
+    "process_peak_working_set_MiB": 701.1
+  },
+  "bounded_worker_probe": {
+    "model": "base.en",
+    "threads": 2,
+    "timeout_seconds": 5,
+    "vad_filter": false,
+    "note": "real persistent worker, unmodified generation token limit; synthetic silence only; all rejected by confidence; resident worker remained alive",
+    "stt_ms": [
+      1917.2,
+      1838.66,
+      2014.87
+    ]
+  }
+}

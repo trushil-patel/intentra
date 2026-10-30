@@ -1,0 +1,48 @@
+# Private configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets*.json
+# Python and packaging
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest-temp/
+.mypy_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
+*.egg-info/
+build/
+dist/
+# Frontend outputs
+node_modules/
+artifacts/
+*.tsbuildinfo
+.vercel/
+# Local engine data; public media belongs under assets/
+/backend/models/
+/backend/logs/
+/backend/temp/
+/backend/recordings/
+/backend/screenshots/
+/backend/*.wav
+/backend/rfefe.txt
+*.log
+*.log.*
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+
+# Documentation and Markdown files at any depth
+docs/
+*.[mM][dD]

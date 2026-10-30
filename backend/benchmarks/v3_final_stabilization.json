@@ -1,0 +1,64 @@
+{
+  "status": "PARTIAL: automated candidate; user live gates pending",
+  "date": "2026-09-27",
+  "user_measured_base_microphone_ms": [
+    2507,
+    1982,
+    2065,
+    1942,
+    2314
+  ],
+  "configuration": {
+    "model": "base.en",
+    "device": "cpu",
+    "requested_compute": "int8",
+    "effective_compute": "int8_float32",
+    "threads": 2,
+    "workers": 1,
+    "beam": 5,
+    "temperatures": [
+      0
+    ],
+    "hotwords_enabled": false,
+    "warmup": false,
+    "timeout_seconds": 5
+  },
+  "measured_startup": {
+    "success": true,
+    "load_ms": 2003.23,
+    "emergency_shortcut_registered": true,
+    "microphone_opened": false
+  },
+  "measured_synthetic_probe": {
+    "load_ms": 1841.56,
+    "stt_ms": [
+      1916.61,
+      2010.95,
+      1779.88
+    ],
+    "input": "one second silence",
+    "vad_filter": false,
+    "accepted": [
+      false,
+      false,
+      false
+    ],
+    "persistent_worker_alive": [
+      true,
+      true,
+      true
+    ],
+    "live_accuracy": "UNMEASURED"
+  },
+  "model_downloads": 0,
+  "optional_model_benchmarks": 0,
+  "live_acceptance": "UNMEASURED",
+  "automated_tests": {
+    "baseline_passed": 291,
+    "final_passed": 395,
+    "subtests_passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 13.49
+  }
+}

@@ -1,0 +1,2 @@
+﻿# Optional local OCR; also install the Tesseract desktop executable separately.
+pytesseract>=0.3.13,<0.4
